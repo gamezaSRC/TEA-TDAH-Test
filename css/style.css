@@ -46,7 +46,7 @@ button {
   --radius: 12px;
   --radius-sm: 8px;
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-  --shadow: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow: 0 12px 40px rgba(0,0,0,0.25);
   --transition: all 0.25s ease;
 }
 
@@ -59,7 +59,8 @@ body {
   margin: 0;
   padding: 20px;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  background: url('../assets/question_marks_background.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #333;
   line-height: 1.7;
   min-height: 100vh;
@@ -234,6 +235,175 @@ button:hover {
 
 button:active {
   transform: translateY(-1px);
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+.custom-btn {
+  width: 600px;
+  height: 80px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  margin: 30px auto;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-15 {
+  background: #2ecc71;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #27ae60;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}
+
+/* ======================== BUTTON ANIMATION ======================== */
+@keyframes loading {
+  0%   { cy: 10; }
+  25%  { cy: 3; }
+  50%  { cy: 10; }
+}
+
+#confettiCanvas {
+  height: 100vh;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+button.submit-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+button.submit-btn .submit-message,
+button.submit-btn .loading-message,
+button.submit-btn .success-message {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+button.submit-btn .submit-message svg,
+button.submit-btn .success-message svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+button.submit-btn .loading-message svg {
+  width: 22px;
+  height: 17px;
+  fill: currentColor;
+}
+
+button.submit-btn .loading-message {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.8);
+}
+
+button.submit-btn .success-message {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.8);
+}
+
+button.submit-btn .success-message svg {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+}
+
+/* Loading state */
+button.submit-btn.loading .submit-message {
+  opacity: 0;
+  transform: translateY(-50%) translateY(-20px);
+}
+
+button.submit-btn.loading .loading-message {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+button.submit-btn.loading .loadingCircle {
+  animation: loading 1s infinite;
+}
+
+button.submit-btn.loading .loadingCircle:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+button.submit-btn.loading .loadingCircle:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Complete state */
+button.submit-btn.complete .submit-message {
+  opacity: 0;
+}
+
+button.submit-btn.complete .loading-message {
+  opacity: 0;
+  transform: translateY(-50%) translateY(80px);
+}
+
+button.submit-btn.complete .success-message {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+button.submit-btn.complete .success-message svg {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.3s ease-in-out 0.2s;
 }
 
 /* ======================== RESULTADOS ======================== */
