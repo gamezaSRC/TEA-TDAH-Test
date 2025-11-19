@@ -36,10 +36,17 @@
   <div class="result" id="result">
     <h2>Resultados del cuestionario</h2>
     <div id="resultText"></div>
+    <div style="max-width:500px; margin:30px auto;">
+      <canvas id="resultChart"></canvas>
+    </div>
     <button type="button" onclick="location.reload()" style="margin-top:20px;">Hacer otro cuestionario</button>
   </div>
 </div>
 
+<canvas id="confettiCanvas"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/confetti.js"></script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
