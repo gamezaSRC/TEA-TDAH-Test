@@ -2,8 +2,8 @@ import { TestBase } from '../core/TestEngine.js';
 import { GaugeChart } from '../core/Charts/GaugeChart.js';
 
 export const SCQ_TodaLaVida = new TestBase({
-  name: "SCQ Forma A - Toda la vida", // para mayores de 4 años con desarrollo verbal
-  info: "Responda pensando en el comportamiento de la persona a lo largo de toda su vida (especialmente entre los 4-5 años). Rodee Sí si la conducta ha ocurrido alguna vez.",
+  name: "SCQ Forma A", // para mayores de 4 años con desarrollo verbal
+  info: "Responda pensando en el comportamiento de la persona a la que evalua a lo largo de toda su vida (especialmente entre los 4-5 años). Rodee Sí si la conducta ha ocurrido alguna vez.",
   questions: [
     { text: "¿Es capaz de hablar usando frases u oraciones cortas?" },
     { text: "¿Puede usted tener una conversación con él o con ella, en la que participen ambos y se vayan turnando o vayan construyendo sobre lo ya dicho?", showIf: resp => resp[0] !== 1 },
@@ -74,4 +74,5 @@ export const SCQ_TodaLaVida = new TestBase({
       <p><small>Solo es un test. Requiere evaluación clínica profesional.</small></p>
     `;
   }
+
 });
