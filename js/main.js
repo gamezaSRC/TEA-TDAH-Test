@@ -7,8 +7,8 @@ import { SCQ_Actual } from './tests/scq_actual.js';
 const tests = {
   tdah_ninos: { obj: SNAPIV_Ninos, target: ['child', 'teen'], label: 'TDAH' },
   tdah_adultos: { obj: ASRS_Adultos, target: ['adult'], label: 'TDAH' },
-  scq_vida: { obj: SCQ_TodaLaVida, target: ['child'], label: 'TEA (Toda la vida)' }, // para el test clásico (lo que todo el mundo usa la primera vez)
-  scq_actual: { obj: SCQ_Actual, target: ['child'], label: 'TEA (Situacion Actual)' }, // para ver si ha habido mejoría o empeorado después de terapia, medicación, etc.
+  scq_vida: { obj: SCQ_TodaLaVida, target: ['child'], label: 'TEA' }, // para el test clásico (lo que todo el mundo usa la primera vez)
+  //scq_actual: { obj: SCQ_Actual, target: ['child'], label: 'TEA (Situacion Actual)' }, // para ver si ha habido mejoría o empeorado después de terapia, medicación, etc.
   //aq50: { obj: AQ50, target: ['child'], label: 'TEA' }
 };
 
@@ -44,5 +44,6 @@ testSelector.addEventListener('change', () => {
   if (selectedKey && tests[selectedKey])
     tests[selectedKey].obj.render(container, selectedAge);
 });
+
 
 
