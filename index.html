@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario TDAH y TEA - Herramienta de Evaluación</title>
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="assets/arbol_logo.png" alt="Arbol del Conocimiento" class="logo-img">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#pruebas">Pruebas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1 class="hero-title">Evaluación de TDAH y TEA</h1>
+    <p class="hero-description">Accede a cuestionarios validados científicamente para una evaluación inicial de Trastorno por Déficit de Atención e Hiperactividad y Trastorno del Espectro Autista.</p>
+    
+    <div class="hero-buttons">
+      <button onclick="scrollToTests()" class="btn btn-primary">
+        <span class="btn-text">Realizar Test</span>
+        <span class="btn-icon">→</span>
+      </button>
+      <a href="#mas-info" class="btn btn-secondary">
+        <span class="btn-text">Más Información</span>
+      </a>
+    </div>
+  </div>
+    
+  <div class="hero-image">
+    <!-- 
+    <div class="floating-card card-1">
+      <div class="card-icon">:D</div>
+      <p>Cuestionarios Faciles</p>
+    </div>
+    <div class="floating-card card-2">
+      <div class="card-icon">:D</div>
+      <p>Resultados Instantáneos</p>
+    </div>
+    <div class="floating-card card-3">
+      <div class="card-icon">:D</div>
+      <p>Precisos</p>
+    </div>
+    -->
+  </div>
+
+</section>
+
+<!-- CARACTERÍSTICAS SECTION -->
+<section class="features" id="sobre">
+  <div class="features-container">
+    <h2 class="section-title">¿Por qué elegir nuestro servicio?</h2>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">✓</div>
+        <h3>Basado en Ciencia</h3>
+        <p>Todos nuestros cuestionarios están validados científicamente y utilizan instrumentos reconocidos internacionalmente.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacidad Garantizada</h3>
+        <p>Tu información está completamente segura. No almacenamos datos personales sin tu consentimiento explícito.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Rápido y Sencillo</h3>
+        <p>Completa la evaluación en minutos con una interfaz intuitiva y fácil de usar.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Resultados Detallados</h3>
+        <p>Recibe análisis completos con gráficos informativos y recomendaciones claras.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">👨‍⚕️</div>
+        <h3>Orientación Profesional</h3>
+        <p>Esta herramienta solo proporciona orientación. Siempre consulta con un profesional cualificado.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Acceso Universal</h3>
+        <p>Disponible 24/7 desde cualquier dispositivo. Gratuito y sin registro obligatorio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBAS DISPONIBLES -->
+<section class="pruebas" id="pruebas">
+  <div class="pruebas-container">
+    <h2 class="section-title">Pruebas Disponibles</h2>
+    
+    <div class="pruebas-grid">
+      <!-- TDAH Niños -->
+      <div class="prueba-card">
+        <div class="prueba-header" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+          <div class="prueba-icon">👶</div>
+          <h3>TDAH en Niños</h3>
+        </div>
+        <div class="prueba-body">
+          <p class="prueba-subtitle">SNAP-IV</p>
+          <p class="prueba-desc">Evaluación del Trastorno por Déficit de Atención e Hiperactividad en población infantil.</p>
+          <ul class="prueba-features">
+            <li>✓ 18 preguntas</li>
+            <li>✓ ~5 minutos</li>
+            <li>✓ Validado clínicamente</li>
+          </ul>
+          <button class="prueba-btn" onclick="startTest('tdah_ninos')">Comenzar</button>
+        </div>
+      </div>
+      
+      <!-- TDAH Adultos -->
+      <div class="prueba-card">
+        <div class="prueba-header" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+          <div class="prueba-icon">👨</div>
+          <h3>TDAH en Adultos</h3>
+        </div>
+        <div class="prueba-body">
+          <p class="prueba-subtitle">ASRS-v1.1</p>
+          <p class="prueba-desc">Herramienta de evaluación para detectar síntomas de TDAH en personas adultas.</p>
+          <ul class="prueba-features">
+            <li>✓ 18 preguntas</li>
+            <li>✓ ~5 minutos</li>
+            <li>✓ Altamente específica</li>
+          </ul>
+          <button class="prueba-btn" onclick="startTest('tdah_adultos')">Comenzar</button>
+        </div>
+      </div>
+      
+      <!-- TEA -->
+      <div class="prueba-card">
+        <div class="prueba-header" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">
+          <div class="prueba-icon">🧩</div>
+          <h3>Trastorno del Espectro Autista</h3>
+        </div>
+        <div class="prueba-body">
+          <p class="prueba-subtitle">SCQ Forma A</p>
+          <p class="prueba-desc">Cuestionario de comunicación social para la evaluación de características autistas.</p>
+          <ul class="prueba-features">
+            <li>✓ 40 preguntas</li>
+            <li>✓ ~10 minutos</li>
+            <li>✓ Comprensiva</li>
+          </ul>
+          <button class="prueba-btn" onclick="startTest('scq_vida')">Comenzar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMACIÓN IMPORTANTE -->
+<section class="info" id="mas-info">
+  <div class="info-container">
+    <div class="info-content">
+      <h2 class="section-title">Información Importante</h2>
+      
+      <div class="info-boxes">
+        <div class="info-box important">
+          <h3>Descargo de Responsabilidad</h3>
+          <p>Esta herramienta proporciona únicamente una orientación inicial y NO sustituye un diagnóstico profesional. Los resultados deben ser interpretados por un médico, psicólogo o profesional de la salud mental cualificado.</p>
+        </div>
+        
+        <div class="info-box">
+          <h3>Propósito</h3>
+          <p>El objetivo de estos cuestionarios es facilitar el proceso inicial de evaluación y aumentar la conciencia sobre los síntomas asociados con TDAH y TEA.</p>
+        </div>
+        
+        <div class="info-box">
+          <h3>Próximos Pasos</h3>
+          <p>Si los resultados sugieren una probabilidad significativa, te recomendamos contactar con un profesional de salud mental para una evaluación completa y formal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+  <div class="cta-content">
+    <h2>¿Listo para comenzar tu evaluación?</h2>
+    <p>Descubre si podrías beneficiarte de una evaluación profesional más completa</p>
+    <button onclick="scrollToTests()" class="btn btn-large">
+      <span class="btn-text">Realizar Test Ahora</span>
+      <span class="btn-icon">→</span>
+    </button>
+  </div>
+</section>
+
+<!-- TESTS SECTION -->
+<section class="tests-section" id="tests" style="display:none;">
+  <div class="container">
+    <button class="close-tests-btn" onclick="closeTests()">← Volver</button>
+    <h1>Cuestionario de TDAH y TEA</h1>
+    <p style="text-align:center; font-size:1.1em;">
+      Herramienta gratuita · Solo orientación · No sustituye diagnóstico profesional
+    </p>
+
+    <div class="selection-step">
+      <h3>1. ¿A quién va dirigida la evaluación?</h3>
+      <select id="ageSelector">
+        <option value="">-- Selecciona una opción --</option>
+        <option value="child">Niños</option>
+        <option value="teen">Adolescentes</option>
+        <option value="adult">Adultos</option>
+      </select>
+    </div>
+
+    <div class="selection-step" id="testSelectorContainer" style="display:none;">
+      <h3>2. Selecciona el cuestionario</h3>
+      <select id="testSelector">
+        <option value="">-- Selecciona un cuestionario --</option>
+      </select>
+    </div>
+
+    <div id="testContainer"></div>
+
+    <div class="result" id="result">
+      <h2>Resultados del cuestionario</h2>
+      <div id="resultText"></div>
+      <div style="max-width:500px; margin:30px auto;">
+        <canvas id="resultChart"></canvas>
+      </div>
+      <button type="button" onclick="resetTest()" style="margin-top:20px;">Hacer otro cuestionario</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Arbol del Conocimiento</h4>
+      <p>Herramienta de evaluación para TDAH y TEA.</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Enlaces Útiles</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#pruebas">Pruebas</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Información</h4>
+      <ul>
+        <li><a href="#mas-info">Información Importante</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#">Privacidad</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Contacto</h4>
+      <p>Email: info@arboldelconocimiento.com</p>
+      <p>Disponible 24/7</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 ArbolDelConocimiento. Todos los derechos reservados. Esta herramienta solo proporciona orientación inicial.</p>
+  </div>
+</footer>
+
+<canvas id="confettiCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/confetti.js"></script>
+<script src="js/landing.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
